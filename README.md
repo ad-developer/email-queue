@@ -6,7 +6,7 @@ The Email Service handles the creation and dispatching of emails, the Email Queu
 
 The following diagrams illustrate the primary components and workflows of each part of the system.
 
-## Adding email(s) to the queue process. 
+## Email Service. 
 ```mermaid
 graph LR
     addEmail[Add Email] --> emailService[Email Queue Service] --> emailQueue[Email Queue];
@@ -14,7 +14,7 @@ graph LR
    
 ```
 
-## Queue worker process. 
+## Email Queue Process. 
 ```mermaid
 graph LR
     emailQueue[Email Queue] --> emailService[Email Service] --> queueWorker[Queue Worker] --> batchService[Batch Service] --> batchQueue[Batch Queue];
@@ -23,7 +23,7 @@ graph LR
    
 ```
 
-## Batch worker process. 
+## Email Batch Process. 
 ```mermaid
 graph LR
     batchQueue[Batch Queue] --> batchService[Batch Service] --> batchWorker[Batch Worker] --> emailClient[Email Client] --> emailRecipient[Email Recipient];
