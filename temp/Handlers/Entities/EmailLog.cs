@@ -7,4 +7,5 @@ public class EmailLog
     public int EmailQueueId { get; set; }   
     public string Action { get; set; }  
     public string Description { get; set; }
+    
 }

@@ -3,20 +3,82 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueue", "src\EmailQueue.csproj", "{29DBA6A5-A2BC-49B1-BC0E-E7997AEAABA0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C571F8C-D146-4AAA-8CD8-612E2F0CB019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueueService", "src\EmailQueueService\EmailQueueService.csproj", "{ACE97357-E609-4B87-9983-C578E456726B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueueCore", "src\EmailQueueCore\EmailQueueCore.csproj", "{E66AF711-B465-4266-BD89-EC4702E24190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueueWorker", "src\EmailQueueWorker\EmailQueueWorker.csproj", "{F7629554-EFC3-4E89-9374-907D3C8E72BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailQueueHost", "src\EmailQueueHost\EmailQueueHost.csproj", "{E03EE282-5CC5-4A02-A237-6EFCAD120000}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29DBA6A5-A2BC-49B1-BC0E-E7997AEAABA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29DBA6A5-A2BC-49B1-BC0E-E7997AEAABA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29DBA6A5-A2BC-49B1-BC0E-E7997AEAABA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29DBA6A5-A2BC-49B1-BC0E-E7997AEAABA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|x64.Build.0 = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Debug|x86.Build.0 = Debug|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|x64.ActiveCfg = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|x64.Build.0 = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACE97357-E609-4B87-9983-C578E456726B}.Release|x86.Build.0 = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|x64.Build.0 = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Debug|x86.Build.0 = Debug|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|x64.ActiveCfg = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|x64.Build.0 = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|x86.ActiveCfg = Release|Any CPU
+		{E66AF711-B465-4266-BD89-EC4702E24190}.Release|x86.Build.0 = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|x64.Build.0 = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE}.Release|x86.Build.0 = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|x64.Build.0 = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Debug|x86.Build.0 = Debug|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|x64.ActiveCfg = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|x64.Build.0 = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|x86.ActiveCfg = Release|Any CPU
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACE97357-E609-4B87-9983-C578E456726B} = {8C571F8C-D146-4AAA-8CD8-612E2F0CB019}
+		{E66AF711-B465-4266-BD89-EC4702E24190} = {8C571F8C-D146-4AAA-8CD8-612E2F0CB019}
+		{F7629554-EFC3-4E89-9374-907D3C8E72BE} = {8C571F8C-D146-4AAA-8CD8-612E2F0CB019}
+		{E03EE282-5CC5-4A02-A237-6EFCAD120000} = {8C571F8C-D146-4AAA-8CD8-612E2F0CB019}
 	EndGlobalSection
 EndGlobal

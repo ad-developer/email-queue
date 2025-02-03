@@ -9,7 +9,7 @@ The following diagrams illustrate the primary components and workflows of each p
 ## Email Service. 
 ```mermaid
 graph LR
-    addEmail[Add Email] --> emailService[Email Queue Service] --> emailQueue[Email Queue];
+    addEmail[Add Email] --> emailService[Email Queue Service] --> emailQueue[(Email Queue)];
     emailService --> logService[Log Service] --> Log[(Log)]
    
 ```
@@ -17,7 +17,7 @@ graph LR
 ## Email Queue Process. 
 ```mermaid
 graph LR
-    emailQueue[(Email Queue)] --> emailService[Email Service] --> queueWorker[Queue Worker] --> batchService[Batch Service] --> batchQueue[(Batch Queue)];
+    emailQueue[(Email Queue)] --> emailService[Email Service] --> queueWorker((Queue Worker)) --> batchService[Batch Service] --> batchQueue[(Batch Queue)];
     emailService --> logService[Log Service] --> Log[(Log)];
     batchService --> logService --> Log
    
@@ -26,7 +26,7 @@ graph LR
 ## Email Batch Process. 
 ```mermaid
 graph LR
-    batchQueue[(Batch Queue)] --> batchService[Batch Service] --> batchWorker[Batch Worker] --> emailClient[Email Client] --> emailRecipient[Email Recipient];
+    batchQueue[(Batch Queue)] --> batchService[Batch Service] --> batchWorker((Batch Worker)) --> emailClient[Email Client] --> emailRecipient[Email Recipient];
     batchService --> logService[Log Service] --> Log[(Log)];
     emailClient --> logService --> Log;
 

@@ -24,4 +24,9 @@ public interface IEmailService
     /// <param name="emailDescription"></param>
     /// <param name="reffNumber"></param>
     void AddEmailToQueue(string emailFrom, string emailTo, string emailTitle, string emailBody, string emailDescription, Guid reffNumber);
+
+    /// <summary>
+    /// ProcessEmailQueue
+    /// </summary>
+    void ProcessEmailQueue();
 }

@@ -6,7 +6,7 @@ public interface IQueueHandler
     /// AddToQueue
     /// </summary>
     /// <param name="emailFrom"></param>
-    /// <param name="emailTo">Can be either single or multiple emails separated by;</param>
+    /// <param name="emailTo">It can be either a single email or multiple emails separated by a semicolon.</param>
     /// <param name="emailTitle"></param>
     /// <param name="emailBody"></param>
     /// <param name="emailDescription"></param>
