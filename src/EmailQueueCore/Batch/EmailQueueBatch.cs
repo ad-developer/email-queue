@@ -25,10 +25,11 @@ public class EmailQueueBatch: IEntity
     
     public int BatchNumber { get; set; }
     public DateTime AddedDate { get; set; } = DateTime.UtcNow;
+    
     public DateTime? ProcessStarted { get; set; }
     public DateTime? ProcessEnded { get; set; }
-    public int ProcessedCount { get; set; }
-    public int FailedCount { get; set; }
+    public int ProcessedCount { get; set; } = 0;
+    public int FailedCount { get; set; } = 0;
     
     public string? LastFailureMessage { get; set; }
 
