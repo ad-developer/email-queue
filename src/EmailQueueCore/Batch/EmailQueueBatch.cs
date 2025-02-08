@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using EmailQueueCore.Common;
-using EmailQueueCore.Queue;
 
 namespace EmailQueueCore.Batch;
 
@@ -34,6 +33,5 @@ public class EmailQueueBatch: IEntity
     public string? LastFailureMessage { get; set; }
 
     [Required]
-    public  EmailQueueStatus Status { get; set; } = EmailQueueStatus.Queued;
-
+    public  EmailQueueBatchStatus Status { get; set; } = EmailQueueBatchStatus.Queued;
 }

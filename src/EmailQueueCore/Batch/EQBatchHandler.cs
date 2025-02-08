@@ -66,7 +66,7 @@ public class EQBatchHandler : IEQBatchHandler, IUnitOfWork
                 EmailTitle = lastEmailQueuue.EmailTitle,
                 EmailBody = lastEmailQueuue.EmailBody,
 
-                Status = EmailQueueStatus.Queued,
+                Status = EmailQueueBatchStatus.Queued,
 
                 AddedDate = DateTime.UtcNow,
             });
@@ -137,7 +137,7 @@ public class EQBatchHandler : IEQBatchHandler, IUnitOfWork
                 EmailTitle = lastEmailQueuue.EmailTitle,
                 EmailBody = lastEmailQueuue.EmailBody,
 
-                Status = EmailQueueStatus.Queued,
+                Status = EmailQueueBatchStatus.Queued,
 
                 AddedDate = DateTime.UtcNow,
             }, cancellationToken);
