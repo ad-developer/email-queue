@@ -19,5 +19,5 @@ public class EmailQueueRepository(IEQContext context) : BaseRepository<EmailQueu
             .Where(p => p.Status == EmailQueueStatus.Queued)
             .OrderBy(p => p.AddedDate)
             .FirstOrDefaultAsync())!;
-    }
+    }    
 }
