@@ -34,7 +34,7 @@ public class EQHandler : IEQHandler, IUnitOfWork
             RefNumber = refNumber, 
             EmailQueueId = eqId, 
             Action = EQActions.EmailQueueQueued,
-            Description = EQActions.EmailQueueQueued
+            Details = EQActions.EmailQueueQueued
         };
         
         _emailQueueLogRepository.Add(logEntry);
@@ -53,7 +53,7 @@ public class EQHandler : IEQHandler, IUnitOfWork
             RefNumber = refNumber, 
             EmailQueueId = eqId, 
             Action = EQActions.EmailQueueQueued,
-            Description = EQActions.EmailQueueQueued
+            Details = EQActions.EmailQueueQueued
         };
         
         await _emailQueueLogRepository.AddAsync(logEntry, cancellationToken);

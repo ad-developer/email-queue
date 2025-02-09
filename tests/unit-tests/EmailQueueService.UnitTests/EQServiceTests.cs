@@ -74,8 +74,8 @@ public class EQServiceEQServiceTests
         var emailQueueId = Guid.NewGuid();
         var expectedLogs = new List<EmailQueueLog>
         {
-            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785",  Action =  EQActions.EmailQueueQueued, Description = "Log 1" },
-            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785", Action =  EQActions.EmailQueueQueued, Description = "Log 2" }
+            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785",  Action =  EQActions.EmailQueueQueued, Details = "Log 1" },
+            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785", Action =  EQActions.EmailQueueQueued, Details = "Log 2" }
         };
 
         _logHandler.GetLogByQueueId(emailQueueId).Returns(expectedLogs);
@@ -95,8 +95,8 @@ public class EQServiceEQServiceTests
         var emailQueueId = Guid.NewGuid();
         var expectedLogs = new List<EmailQueueLog>
         {
-            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785",  Action =  EQActions.EmailQueueQueued, Description = "Log 1" },
-            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785", Action =  EQActions.EmailQueueQueued, Description = "Log 2" }
+            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785",  Action =  EQActions.EmailQueueQueued, Details = "Log 1" },
+            new() { Id = Guid.NewGuid(), EmailQueueId = emailQueueId, RefNumber = "AAAB785", Action =  EQActions.EmailQueueQueued, Details = "Log 2" }
         };
 
         _eqService.GetEmailQueueLogByIdAsync(emailQueueId).Returns(Task.FromResult<IEnumerable<EmailQueueLog>>(expectedLogs));

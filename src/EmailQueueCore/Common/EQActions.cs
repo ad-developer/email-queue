@@ -10,6 +10,8 @@ public sealed class EQActions
     public const string EmailBatchQueued = "Email-Batch:Queued";
     public const string EmailBatchProcessing = "Email-Batch:Processing";
     public const string EmailBatchFailed = "Email-Batch:Failed";
+    public const string EmailBatchFailedPermanent = "Email-Batch:FailedParmanent";
     public const string EmailBatchReTryProcessing = "Email-Batch:ReTryProcessing";
-    public const string EmailBatchCompleted = "Email-Batch:Failed";
+     public const string EmailBatchReTryProcessingManual = "Email-Batch:ProcessingNamual";
+    public const string EmailBatchCompleted = "Email-Batch:Completed";
 }

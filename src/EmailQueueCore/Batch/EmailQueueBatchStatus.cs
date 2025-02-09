@@ -3,9 +3,9 @@ namespace EmailQueueCore.Batch;
 public enum EmailQueueBatchStatus
 {
     Queued = 1,
-    ProcessStarted = 2,
-    ProcessEnded = 3,
-    Failed = 4,
-    FailedPermanent = 5,
-    Completed = 6
+    Processing = 2,
+    Failed = 3,
+    FailedPermanent = 4,
+    Completed = 5,
+    ProcessingManually = 6,
 }

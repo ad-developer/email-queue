@@ -11,7 +11,19 @@ public class EmailQueueBatchRepository(IEQContext context, IOptions<EmailQueueOp
         var options = emailQueueOptions.Value;
         
         return context.EmailQueueBatches
-            .Where(p => p.Status == EmailQueueBatchStatus.Queued)
+            .Where(p => p.Status == EmailQueueBatchStatus.Queued )
+            .Take(options.BatchProcessCount)
+            .OrderByDescending(p => p.AddedDate)
+            .ToList();
+    }
+
+    public IEnumerable<EmailQueueBatch> GetNextEmailQueueBatchFailedList()
+    {
+        var options = emailQueueOptions.Value;
+        
+        return context.EmailQueueBatches
+            .Where(p => p.Status == EmailQueueBatchStatus.Failed )
+            .Take(options.BatchProcessCount)
             .OrderByDescending(p => p.AddedDate)
             .ToList();
     }
