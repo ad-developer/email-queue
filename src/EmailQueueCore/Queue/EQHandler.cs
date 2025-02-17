@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using EmailQueueCore.Common;
 using EmailQueueCore.Log;
 
@@ -29,15 +28,8 @@ public class EQHandler : IEQHandler, IUnitOfWork
     {
         var eqId = _emailQueueRepository.Add(new EmailQueue(emailTo, emailFrom, emailTitle, emailBody, isHtmlBody, emailDescription, refNumber, requestor)).Id;
         SaveChanges();
-
-        var logEntry = new EmailQueueLog {
-            RefNumber = refNumber, 
-            EmailQueueId = eqId, 
-            Action = EQActions.EmailQueueQueued,
-            Details = EQActions.EmailQueueQueued
-        };
+        _emailQueueLogRepository.LogEmailQueueQueued(refNumber, eqId);
         
-        _emailQueueLogRepository.Add(logEntry);
         SaveChanges();
 
         return eqId;
@@ -49,14 +41,8 @@ public class EQHandler : IEQHandler, IUnitOfWork
             .ContinueWith(t => t.Result.Id);
         await SaveChangesAsync(cancellationToken);
         
-        var logEntry = new EmailQueueLog {
-            RefNumber = refNumber, 
-            EmailQueueId = eqId, 
-            Action = EQActions.EmailQueueQueued,
-            Details = EQActions.EmailQueueQueued
-        };
-        
-        await _emailQueueLogRepository.AddAsync(logEntry, cancellationToken);
+        await _emailQueueLogRepository.LogEmailQueueQueuedAsync(refNumber, eqId, cancellationToken);
+
         await SaveChangesAsync(cancellationToken);
 
         return eqId;
