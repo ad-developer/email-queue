@@ -1,3 +1,5 @@
+[![.NET](https://github.com/ad-developer/email-queue/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ad-developer/email-queue/actions/workflows/dotnet.yml)
+
 # Email Queue Service
 
 The Email Queue Service is a robust system designed to ensure the reliable delivery of single or bulk emails to recipients, guaranteeing that each email reaches its intended destination. The system is structured as a three-part architecture, comprising an **Email Service**, an **Email Queue Process**, and an **Email Batch Process**.
