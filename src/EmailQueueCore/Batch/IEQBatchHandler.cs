@@ -3,7 +3,7 @@ namespace EmailQueueCore.Batch;
 public interface IEQBatchHandler
 {
     void ScheduleBatches();
-    Task ScheduleBatchesAsync(CancellationToken cancellationToken  = default);
+    Task ScheduleBatchesAsync(CancellationToken cancellationToken);
     void ProcessBatches();
-    Task ProcessBatchesAsync();
+    Task ProcessBatchesAsync(CancellationToken cancellationToken);
 }
